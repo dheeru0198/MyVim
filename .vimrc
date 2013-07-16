@@ -86,6 +86,8 @@ if 'VIRTUAL_ENV' in os.environ:
     execfile(activate_this, dict(__file__=activate_this))
 EOF
 
+let g:syntastic_python_checkers=['pylint']
+
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
@@ -134,10 +136,10 @@ let g:pymode_doc = 1
 let g:pymode_doc_key = 'K'
 
 " Load run code plugin
-let g:pymode_run = 1
+"let g:pymode_run = 1
 
 " Key for run python code
-let g:pymode_run_key = '<leader>r'
+"let g:pymode_run_key = '<leader>r'
 
 " Load pylint code plugin
 let g:pymode_lint = 1
@@ -249,7 +251,7 @@ let g:pymode_breakpoint = 1
 let g:pymode_breakpoint_key = '<leader>b'
 
 " Autoremove unused whitespaces
-"let g:pymode_utils_whitespaces = 1
+let g:pymode_utils_whitespaces = 0
 
 " Enable pymode indentation
 "let g:pymode_indent = 1
